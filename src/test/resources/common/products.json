@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Pie",
+    "description": "Yellow fruit",
+    "price": 23.34,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 2,
+    "name": "Cake",
+    "description": "Sweet delight",
+    "price": 15.99,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 3,
+    "name": "Cupcake",
+    "description": "Mini treat",
+    "price": 5.49,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 4,
+    "name": "Brownie",
+    "description": "Chocolate goodness",
+    "price": 12.75,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 5,
+    "name": "Cheesecake",
+    "description": "Creamy delight",
+    "price": 18.50,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 6,
+    "name": "Fruit Tart",
+    "description": "Colorful treat",
+    "price": 21.25,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 7,
+    "name": "Pudding",
+    "description": "Smooth dessert",
+    "price": 8.99,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 8,
+    "name": "Strudel",
+    "description": "Flaky pastry",
+    "price": 14.50,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 9,
+    "name": "Muffin",
+    "description": "Portable snack",
+    "price": 3.75,
+    "dateOfCreation": "2023-11-09"
+  },
+  {
+    "id": 10,
+    "name": "Eclair",
+    "description": "French delight",
+    "price": 9.99,
+    "dateOfCreation": "2023-11-09"
+  }
+]

@@ -9,6 +9,7 @@ import com.richardSkrivanek.cleevio.validation.Validation;
 import exceptions.customExceptions.ProductNameAlreadyExistException;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class InventoryItemServiceImpl implements InventoryItemService {
 
     @NonNull
@@ -41,15 +43,18 @@ public class InventoryItemServiceImpl implements InventoryItemService {
                     .price(dto.getPrice())
                     .build();
             InventoryItem newItem = inventoryItemRepository.save(inventoryItem);
+            log.info("{} was saved to DB", inventoryItem.getName());
             return mapper.toDto(newItem);
 
         } catch (ConstraintViolationException ex) {
+            log.warn("This product name is already in DB.");
             throw new ProductNameAlreadyExistException(dto.getName());
         }
     }
 
     @Override
     public List<InventoryItemDto> geAll() {
+        log.info("Getting all inventory.");
         return inventoryItemRepository.findAll()
                 .stream()
                 .map(mapper::toDto)
@@ -58,6 +63,7 @@ public class InventoryItemServiceImpl implements InventoryItemService {
 
     @Override
     public InventoryItemDto getByName(String name) {
+        log.info("Getting product with name {}", name);
         return mapper.toDto(inventoryItemRepository.findByName(name));
     }
 }
